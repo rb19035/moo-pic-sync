@@ -1,4 +1,4 @@
-package com.tcgms.moo_pic_sync
+package com.tcgms.moopicsync
 
 import android.Manifest
 import android.content.ContentUris
@@ -14,9 +14,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.*
 import androidx.core.content.ContextCompat
-import com.tcgms.moo_pic_sync.model.MediaItem
-import com.tcgms.moo_pic_sync.ui.SyncScreen
-import com.tcgms.moo_pic_sync.ui.theme.MoopicsyncTheme
+import com.tcgms.moopicsync.model.MediaItem
+import com.tcgms.moopicsync.ui.SyncScreen
+import com.tcgms.moopicsync.ui.theme.MoopicsyncTheme
 
 class SyncActivity : ComponentActivity() {
 

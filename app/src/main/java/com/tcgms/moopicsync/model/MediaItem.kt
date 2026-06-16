@@ -1,4 +1,4 @@
-package com.tcgms.moo_pic_sync.model
+package com.tcgms.moopicsync.model
 
 import android.net.Uri
 

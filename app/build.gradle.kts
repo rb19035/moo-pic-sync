@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tcgms.moo_pic_sync"
+    namespace = "com.tcgms.moopicsync"
     compileSdk = 35
 
     defaultConfig {

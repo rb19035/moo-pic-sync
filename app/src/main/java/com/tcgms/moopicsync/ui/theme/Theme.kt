@@ -1,6 +1,5 @@
-package com.tcgms.moo_pic_sync.ui.theme
+package com.tcgms.moopicsync.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

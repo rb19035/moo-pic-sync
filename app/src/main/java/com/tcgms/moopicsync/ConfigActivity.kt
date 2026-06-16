@@ -1,13 +1,13 @@
-package com.tcgms.moo_pic_sync
+package com.tcgms.moopicsync
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.tcgms.moo_pic_sync.data.ConfigManager
-import com.tcgms.moo_pic_sync.ui.ConfigScreen
-import com.tcgms.moo_pic_sync.ui.theme.MoopicsyncTheme
+import com.tcgms.moopicsync.data.ConfigManager
+import com.tcgms.moopicsync.ui.ConfigScreen
+import com.tcgms.moopicsync.ui.theme.MoopicsyncTheme
 
 class ConfigActivity : ComponentActivity() {
     private lateinit var configManager: ConfigManager

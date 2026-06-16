@@ -1,4 +1,4 @@
-package com.tcgms.moo_pic_sync.ui
+package com.tcgms.moopicsync.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.tcgms.moo_pic_sync.model.MediaItem
+import com.tcgms.moopicsync.model.MediaItem
 
 @Composable
 fun SyncScreen(

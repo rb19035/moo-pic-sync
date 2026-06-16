@@ -1,4 +1,4 @@
-package com.tcgms.moo_pic_sync.ui.theme
+package com.tcgms.moopicsync.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

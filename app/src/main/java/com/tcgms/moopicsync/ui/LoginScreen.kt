@@ -1,4 +1,4 @@
-package com.tcgms.moo_pic_sync.ui
+package com.tcgms.moopicsync.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.tcgms.moo_pic_sync.ui.theme.MoopicsyncTheme
+import com.tcgms.moopicsync.ui.theme.MoopicsyncTheme
 
 @Composable
 fun LoginScreen(onLoginSuccess: () -> Unit) {

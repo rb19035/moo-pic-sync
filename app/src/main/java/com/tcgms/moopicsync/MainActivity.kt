@@ -1,13 +1,13 @@
-package com.tcgms.moo_pic_sync
+package com.tcgms.moopicsync
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.tcgms.moo_pic_sync.data.ConfigManager
-import com.tcgms.moo_pic_sync.ui.LoginScreen
-import com.tcgms.moo_pic_sync.ui.theme.MoopicsyncTheme
+import com.tcgms.moopicsync.data.ConfigManager
+import com.tcgms.moopicsync.ui.LoginScreen
+import com.tcgms.moopicsync.ui.theme.MoopicsyncTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

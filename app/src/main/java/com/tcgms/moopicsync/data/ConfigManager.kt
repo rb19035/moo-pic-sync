@@ -1,4 +1,4 @@
-package com.tcgms.moo_pic_sync.data
+package com.tcgms.moopicsync.data
 
 import android.content.Context
 import androidx.security.crypto.EncryptedSharedPreferences
