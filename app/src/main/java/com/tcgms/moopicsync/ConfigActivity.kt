@@ -1,5 +1,6 @@
 package com.tcgms.moopicsync
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -22,10 +23,14 @@ class ConfigActivity : ComponentActivity() {
             MoopicsyncTheme {
                 ConfigScreen(
                     initialData = configManager.getConfig(),
-                    onSave = { url, port, user, pass ->
-                        configManager.saveConfig(url, port, user, pass)
+                    onSave = { url, port, email, apiKey ->
+                        val wasConfigured = configManager.isConfigured()
+                        configManager.saveConfig(url, port, email, apiKey)
                         Toast.makeText(this, "Configuration Saved", Toast.LENGTH_SHORT).show()
-                        // TODO: REST API call to authenticate
+                        
+                        if (!wasConfigured) {
+                            startActivity(Intent(this, SyncActivity::class.java))
+                        }
                         finish()
                     },
                     onCancel = {

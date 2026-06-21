@@ -20,13 +20,13 @@ fun ConfigScreen(
 ) {
     var url by remember { mutableStateOf(initialData.url) }
     var port by remember { mutableStateOf(initialData.port) }
-    var username by remember { mutableStateOf(initialData.username) }
-    var password by remember { mutableStateOf(initialData.password) }
+    var email by remember { mutableStateOf(initialData.email) }
+    var apiKey by remember { mutableStateOf(initialData.apiKey) }
 
     var urlError by remember { mutableStateOf(false) }
     var portError by remember { mutableStateOf(false) }
-    var userError by remember { mutableStateOf(false) }
-    var passError by remember { mutableStateOf(false) }
+    var emailError by remember { mutableStateOf(false) }
+    var apiKeyError by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -57,22 +57,23 @@ fun ConfigScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = username,
-                onValueChange = { username = it; userError = false },
-                label = { Text("User Name") },
-                isError = userError,
+                value = email,
+                onValueChange = { email = it; emailError = false },
+                label = { Text("Email Address") },
+                isError = emailError,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = password,
-                onValueChange = { password = it; passError = false },
-                label = { Text("Password") },
-                isError = passError,
+                value = apiKey,
+                onValueChange = { apiKey = it; apiKeyError = false },
+                label = { Text("API Key") },
+                isError = apiKeyError,
                 visualTransformation = PasswordVisualTransformation(),
                 modifier = Modifier.fillMaxWidth()
             )
 
-            if (urlError || portError || userError || passError) {
+            if (urlError || portError || emailError || apiKeyError) {
                 Text(
                     text = "Please enter values for the required fields.",
                     color = MaterialTheme.colorScheme.error,
@@ -92,11 +93,11 @@ fun ConfigScreen(
                 Button(onClick = {
                     urlError = url.isBlank()
                     portError = port.isBlank()
-                    userError = username.isBlank()
-                    passError = password.isBlank()
+                    emailError = email.isBlank()
+                    apiKeyError = apiKey.isBlank()
 
-                    if (!urlError && !portError && !userError && !passError) {
-                        onSave(url, port, username, password)
+                    if (!urlError && !portError && !emailError && !apiKeyError) {
+                        onSave(url, port, email, apiKey)
                     }
                 }) {
                     Text("Save")
